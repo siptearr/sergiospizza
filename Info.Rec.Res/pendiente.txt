@@ -1,0 +1,17 @@
+select r.numero,r.fecha,r.horario,s.nombresede,g.nombre as grupo,e.nombre as equipo,ea.nombre as equipo,u.nombre as umpire from ronda r
+inner join sede s on(r.sede_idsede=s.idsede)
+inner join grupo g on(r.grupo_idgrupo=g.idgrupo)
+inner join equipo e on (r.equipo_idequipo1=e.idequipo)
+inner join equipo ea on (r.equipo_idequipo2=ea.idequipo)
+inner join umpire u on (r.umpire_idumpire=u.idumpire)
+
+
+error_reporting = E_ALL & ~E_DEPRECATED
+
+http://huguidugui.wordpress.com/2013/11/21/fpdf-cabeceras-datos/
+http://fpdf.de/downloads/addons/14/
+
+http://www.fpdf.org/
+http://fpdf.de/downloads/addons/14/
+
+cqjq9os5al.database.windows.net,1433; Database = rickcloud_db\", \"rickcloud_root\", \"S0p1k1r198\"
