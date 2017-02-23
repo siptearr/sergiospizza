@@ -153,19 +153,10 @@ Zona para codigo de texto predictivo - Inicio
 		color: #999;
 	}
 
-
-
-
-
-
 	label
 	{
 		font-weight: bold;
 	}
-
-	
-	
-	
 	/*
 	the parent element of an autosuggest input should have a relative position
 	*/
@@ -174,7 +165,29 @@ Zona para codigo de texto predictivo - Inicio
 		position: relative;
 	}
 
-	
+        .ini_transition_pizzas {
+            width: 100px;
+            height: 20px;
+            background: #F0F0F0;
+            transition: width 1s, height 1s, margin 1s;
+            margin: 50px auto 0;
+        }
+
+        .hidde_transition_pizzas {
+            width: 100px;
+            height: 20px;
+            background: #F0F0F0;
+            transition: width 1s, height 1s, margin 1s;
+            margin: 50px auto 0;
+        }
+        
+	.show_transition_pizzas{
+            width: 100%;
+            height: 200px;
+            background: #F0F0F0;
+            transition: width 1s, height 1s, margin 1s;
+            margin: 0 auto;
+        }
 </style>
 <!--
 Zona para codigo de texto predictivo - Fin
@@ -212,10 +225,11 @@ switch($privilegios){
 
     <ul>
         <div id="menu_overlay"></div>
-        <div id="capa_mostrador" style="visibility: hidden;">
+        <!--<div id="capa_mostrador" style="visibility: hidden;">-->
+        <div id="capa_mostrador" style="visibility: hidden">
             <input type="text" id="testid" value="" style="font-size: 10px; width: 20px; visibility: hidden;" disabled="disabled" />
             <label for="testinput">Cliente: </label>
-            <input style="width: 300px" type="text" id="testinput" placeholder="Publico en General" value="" /> 
+            <input style="width: 300px" type="text" id="testinput" placeholder="Publico en General" value="" />
             <a href="javascript:iniciar_comanda();" ><img src="<?php echo $rutatemplate ?>images/iniciarcomanda.png?<?php echo time(); ?>"></a>
 <!--
         <br /><br /><br />
@@ -302,6 +316,8 @@ $('.options-menu-overlay').fadeOut('fast');
 <input type="hidden" id="clientehidden" value="">
 <input type="hidden" id="usuariohidden" value="<?php echo @$idusr; ?>">
 <input type="hidden" id="filtro_reporte" value="">
+
+
 
 </body>
 </html>

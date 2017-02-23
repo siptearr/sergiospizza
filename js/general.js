@@ -724,9 +724,7 @@ function asignacliente(){
 }
 
 function abremenu_mostrador(sucursal){
-    document.getElementById("comandas_overlay").style.visibility = "hidden";
-    document.getElementById("capa_mostrador").removeAttribute("style");
-    document.getElementById("capa_mostrador").style.visibility = "visible";
+    //document.getElementById("comandas_overlay").style.visibility = "hidden";
     var menu = $('.menu-toggle').data('show-dialog');
     $('.' + menu).fadeIn(300);
     
@@ -739,86 +737,8 @@ function abremenu_mostrador(sucursal){
     nodo = document.getElementById("menu_overlay");
     
     asigna_folioorden();
-    carga_info_post(nodo,script,parametros);
-    
-//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-//Codigo para la ejecucion del texto predictivo - Inicio
-//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    carga_info_post_clientes(nodo,script,parametros);
 
-	var options = {
-		script:"scripts/obten_clientes.php?json=true&limit=20&",
-		varname:"input",
-		json:true,
-		shownoresults:false,
-		maxresults:6,
-		callback: function (obj) { document.getElementById('testid').value = obj.id; }
-	};
-	var as_json = new bsn.AutoSuggest('testinput', options);
-	
-	
-	var options_xml = {
-		script: function (input) { return "scripts/obten_clientes.php?input="+input+"&testid="+document.getElementById('testid').value; },
-		varname:"input"
-	};
-	var as_xml = new bsn.AutoSuggest('testinput_xml', options_xml);
-
-//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-//Codigo para la ejecucion del texto predictivo - Fin
-//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-//Codigo para la ejecucion de los menus animados - Inicio
-//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-animatedcollapse.addDiv('pizzeria', 'fade=0,speed=400,group=pets,hide=1');
-animatedcollapse.addDiv('cocina', 'fade=0,speed=400,group=pets,persist=1,hide=1');
-animatedcollapse.addDiv('bebidas', 'fade=0,speed=400,group=pets,persist=1,hide=1');
-animatedcollapse.addDiv('postres', 'fade=0,speed=400,group=pets,persist=1,hide=1');
-
-animatedcollapse.addDiv('hidde_ingredientes', 'fade=1,height=50px');
-animatedcollapse.addDiv('show_ingredientes', 'fade=1,height=100px');
-
-
-animatedcollapse.addDiv('pastas', 'fade=1,height=250px');
-animatedcollapse.addDiv('carnes', 'fade=1,height=150px');
-animatedcollapse.addDiv('hamburguesas', 'fade=1,height=400px');
-animatedcollapse.addDiv('menupostres', 'fade=1,height=150px');
-animatedcollapse.addDiv('cremas', 'fade=1,height=250px');
-animatedcollapse.addDiv('otrosplatillos', 'fade=1,height=400px');
-animatedcollapse.addDiv('menubebidas', 'fade=1,height=300px');
-
-animatedcollapse.addDiv('pizzabisteck', 'fade=1,height=50px');
-animatedcollapse.addDiv('pizzasuprema', 'fade=1,height=100px');
-animatedcollapse.addDiv('pizzasalami', 'fade=1,height=50px');
-animatedcollapse.addDiv('pizzasalamiycarnemolida', 'fade=1,height=50px');
-animatedcollapse.addDiv('pizzajamon', 'fade=1,height=50px');
-animatedcollapse.addDiv('pizzajamonypinia', 'fade=1,height=50px');
-animatedcollapse.addDiv('pizzasergios', 'fade=1,height=100px');
-animatedcollapse.addDiv('pizzachampiniones', 'fade=1,height=50px');
-animatedcollapse.addDiv('pizzasuprema', 'fade=1,height=100px');
-animatedcollapse.addDiv('pizzachampiniones', 'fade=1,height=50px');
-animatedcollapse.addDiv('pizzachampinionesycarnemolida', 'fade=1,height=50px');
-animatedcollapse.addDiv('pizzamexicana', 'fade=1,height=100px');
-animatedcollapse.addDiv('pizzatocinoconcebolla', 'fade=1,height=50px');
-animatedcollapse.addDiv('pizzachorizoconcebolla', 'fade=1,height=50px');
-animatedcollapse.addDiv('pizzaatun', 'fade=1,height=50px');
-animatedcollapse.addDiv('pizzacamarones', 'fade=1,height=50px');
-animatedcollapse.addDiv('pizzavegetariana', 'fade=1,height=100px');
-animatedcollapse.addDiv('pizzacamaronesconchampiniones', 'fade=1,height=50px');
-animatedcollapse.addDiv('pizzasalchichaviena', 'fade=1,height=50px');
-animatedcollapse.addDiv('pizzademariscos', 'fade=1,height=100px');
-animatedcollapse.addDiv('pizzaespecial', 'fade=1,height=100px');
-animatedcollapse.addDiv('pizzadecarnesfrias', 'fade=1,height=100px');
-
-animatedcollapse.ontoggle=function($, divobj, state){ //fires each time a DIV is expanded/contracted
-	//$: Access to jQuery
-	//divobj: DOM reference to DIV being expanded/ collapsed. Use "divobj.id" to get its ID
-	//state: "block" or "none", depending on state
-}
-
-animatedcollapse.init();
-//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-//Codigo para la ejecucion de los menus animados - Fin
-//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 }
 
 function asigna_folioorden(){
@@ -953,70 +873,6 @@ function actualiza_reloj(id_captura,tiempo){
     setTimeout("actualiza_reloj('"+id_captura+"','"+tiempoactual+"');",1000);
 }
 
-function calculadiasatn(iding,idegr,idres){
-    var f1 = document.getElementById(iding).value;
-    var f2 = document.getElementById(idegr).value;
-    
-    var aFecha1 = f1.split('-'); 
-    var aFecha2 = f2.split('-'); 
-    var fFecha1 = Date.UTC(aFecha1[0],aFecha1[1]-1,aFecha1[2]); 
-    var fFecha2 = Date.UTC(aFecha2[0],aFecha2[1]-1,aFecha2[2]); 
-    var dif = fFecha2 - fFecha1;
-    //alert(dif);
-    var dias = Math.floor(dif / (1000 * 60 * 60 * 24)); 
-    
-    //var dias = diafin - diainicio;
-    document.getElementById(idres).value = dias;
-}
-
-
-function obtenfecha(feccomp,iding,idegr,idres){
-    switch(feccomp){
-        case "fecing":
-            var fecingtemp2 = document.getElementById(iding).value;
-            if(fecingtemp != fecingtemp2){
-                cierra_cal();
-                calculadiasatn(iding,idegr,idres);
-            }else{
-                setTimeout("obtenfecha('"+feccomp+"','"+iding+"','"+idegr+"','"+idres+"');",100);
-            }
-        break;
-        case "fecegr":
-            var fecegrtemp2 = document.getElementById(idegr).value;
-            if(fecegrtemp != fecegrtemp2){
-                cierra_cal();
-                calculadiasatn(iding,idegr,idres);
-            }else{
-                setTimeout("obtenfecha('"+feccomp+"','"+iding+"','"+idegr+"','"+idres+"');",100);
-            }
-        break;
-        case "fecingti":
-            var fecingtitemp2 = document.getElementById(iding).value;
-            if(fecingtitemp != fecingtitemp2){
-                cierra_cal();
-                calculadiasatn(iding,idegr,idres);
-            }else{
-                setTimeout("obtenfecha('"+feccomp+"','"+iding+"','"+idegr+"','"+idres+"');",100);
-            }
-        break;
-        case "fecegrti":
-            var fecegrtitemp2 = document.getElementById(idegr).value;
-            if(fecegrtitemp != fecegrtitemp2){
-                cierra_cal();
-                calculadiasatn(iding,idegr,idres);
-            }else{
-                setTimeout("obtenfecha('"+feccomp+"','"+iding+"','"+idegr+"','"+idres+"');",100);
-            }
-        break;
-    default:
-    }
-        /*alert("feccomp: "+feccomp);
-        alert("iding: "+iding);
-        alert("idegr: "+idegr);
-        alert("idres: "+idres);
-        alert("fecingtemp: "+fecingtemp);*/
-}
-
 function cierra_cal(){
     if(calendario_open == true){
         xc_cv(0);
@@ -1028,24 +884,6 @@ function obtenfechaactual(nodo){
     var script = "scripts/fechaactual.php";
     
     get_fechaactual(nodo,script);
-}
-
-function muestraservicios(id){
-    nodo_popup = document.getElementById("resultadomultiples");
-    var script = "scripts/muestraservicios.php?idatencion="+id;
-    
-    get_popup_informacion(nodo_popup,script);
-}
-
-function muestracauses(id){
-    nodo_popup = document.getElementById("resultadomultiples");
-    var script = "scripts/muestracauses.php?idatencion="+id;
-    
-    get_popup_informacion(nodo_popup,script);
-}
-
-function cerrar_resultadomultiples(){
-    document.getElementById("resultadomultiples").innerHTML = "";
 }
 
 function redibuja_form(catalogo,ordenamiento){
@@ -1222,9 +1060,15 @@ function cierraproduccion(catalogo,id){
 
 function iniciar_comanda(){
     document.getElementById("capa_mostrador").style.float = "left";
-    animatedcollapse.hide('pizzeria');
-    animatedcollapse.hide('cocina');
-    animatedcollapse.hide('bebidas');
-    animatedcollapse.hide('postres');
     document.getElementById("comandas_overlay").style.visibility = "visible";
 }
+
+function oculta_divs(){
+    document.getElementById("div_transition_pizzas").className = "hidde_transition_pizzas";
+    document.getElementById("contenido_pizzas").style.visibility = "hidden";
+}
+function show_div_pizzas(){
+    document.getElementById("div_transition_pizzas").className = "show_transition_pizzas";
+    document.getElementById("contenido_pizzas").style.visibility = "visible";
+}
+    
