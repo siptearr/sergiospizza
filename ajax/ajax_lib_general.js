@@ -61,6 +61,55 @@ function carga_info_post(nodo,script,parametros){
     }
 }
 
+function carga_info_post_clientes(nodo,script,parametros){
+    
+    var request;
+    request = GetXmlHttpObject();
+
+    request.onreadystatechange = procesarRespuesta;
+    request.open('POST', script, true);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send(parametros);
+          
+    function procesarRespuesta()
+    {
+        if(request.readyState==1)
+        {
+            nodo.innerHTML = "<img src=\"imagenes/loadingcircle.gif\" />Cargando datos...";
+        }
+        if(request.readyState==4)
+        {
+            nodo.innerHTML = request.responseText;
+            document.getElementById("capa_mostrador").style.visibility = "visible";
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+//Codigo para la ejecucion del texto predictivo - Inicio
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+	var options = {
+		script:"scripts/obten_clientes.php?json=true&limit=20&",
+		varname:"input",
+		json:true,
+		shownoresults:false,
+		maxresults:6,
+		callback: function (obj) { document.getElementById('testid').value = obj.id; }
+	};
+	var as_json = new bsn.AutoSuggest('testinput', options);
+	
+	
+	var options_xml = {
+		script: function (input) { return "scripts/obten_clientes.php?input="+input+"&testid="+document.getElementById('testid').value; },
+		varname:"input"
+	};
+	var as_xml = new bsn.AutoSuggest('testinput_xml', options_xml);
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+//Codigo para la ejecucion del texto predictivo - Fin
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+        }  
+    }
+}
+
 function ajax_asignafolioorden(nodo,script){
     var request;
     request = GetXmlHttpObject();

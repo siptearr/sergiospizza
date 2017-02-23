@@ -3,8 +3,9 @@
 <!-- Capa de pizzeria -->
 <!-- Capa de pizzeria -->
 
-<a href="#" rel="toggle[pizzeria]" data-openimage="<?php echo $rutatemplate ?>images/collapse.jpg?<?php echo time(); ?>" data-closedimage="<?php echo $rutatemplate ?>images/expand.jpg?<?php echo time(); ?>">Pizzeria <img src="<?php echo $rutatemplate ?>images/collapse.jpg?<?php echo time(); ?>" border="0" /></a>
-
+<div id="div_transition_pizzas" class="ini_transition_pizzas"><a href="javascript:show_div_pizzas();">Pizzas</a>
+    <div id="contenido_pizzas" style="visibility: hidden">
+        <a href="javascript:oculta_divs();">Cerrar</a>
 <div id="pizzeria" style="width: 400px; background: #5BADFF; float: left;">
 <!--BISTECK-->
     <a href="javascript:animatedcollapse.toggle('pizzabisteck')">Bisteck <img src="<?php echo $rutatemplate ?>images/toggle.jpg?<?php echo time(); ?>" border="0" /></a>
@@ -274,7 +275,9 @@
         </ul>
     </div>
 </div>
-
+        
+    </div>
+</div>
 <!-- Capa de pizzeria -->
 <!-- FIN -->
 <!-- Capa de pizzeria -->
