@@ -1,0 +1,16 @@
+-limpieza de menus cuando no hay sesion iniciada
+-Agregar Fecha en la comanda
+-Cuando se guarda una comanda, marcar la mesa como ocupada
+-cambiar estatus al guardar comanda
+-al dar click en la mesa, poder desplegar las ordenes y el estado de la mesa, para poder agregar mas ordenes o cerrar la cuenta de la mesa
+-cambiar imagen de "logout"
+-ligar enlaces de pizzeria y restaurante del menu inicio a las cuentas correspondientes
+-cambiar filtro del reporte de pizzeria a "enproceso"
+-Cambiar los encabezados de los reportes "resultados por pagina"
+-dar funcionalidad a los botones de cerrar ordenes en los reportes del menu pizzeria y restaurante
+-mover el reporte de ordenes enproceso,terminadas(listas para entrega) sin botones de accion, filtrado por mesero, y limpiar campos que no deben ser visibles
+-Colorear las lineas del reporte orden.
+-cargar el control de cliente en seccion cliente y filtrar Calle y numero y colonia
+-Usuario y Mostrador (ordenes)
+-Restaurante -> Cocina
+-Agregar ingredientes
