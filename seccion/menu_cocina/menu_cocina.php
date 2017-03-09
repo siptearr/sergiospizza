@@ -1,8 +1,9 @@
+<div id="div_transition_cocina" class="ini_transition_cocina" style="float:left"><a href="javascript:show_div_cocina();"><img src="<?php echo $rutatemplate ?>images/cocina.png" width="150" height="150"></a>
+    <div id="contenido_cocina" style="visibility: hidden">
+        <a href="javascript:oculta_div_cocina();"><img src="<?php echo $rutatemplate ?>images/cerrar.png"></a>
 <!-- Capa de cocina -->
 <!-- INICIO -->
 <!-- Capa de cocina -->
-<a href="#" rel="toggle[cocina]" data-openimage="<?php echo $rutatemplate ?>images/collapse.jpg?<?php echo time(); ?>" data-closedimage="<?php echo $rutatemplate ?>images/expand.jpg?<?php echo time(); ?>">Cocina <img src="<?php echo $rutatemplate ?>images/collapse.jpg?<?php echo time(); ?>" border="0" /></a> <!--<a href="javascript:animatedcollapse.show('dog')">Slide Down</a> || <a href="javascript:animatedcollapse.hide('dog')">Slide Up</a>-->
-
 <div id="cocina" style="width: 300px; background: #5BADFF; float: left;">
     <!-- Pastas -->
     <a href="javascript:animatedcollapse.toggle('pastas')">Pastas <img src="<?php echo $rutatemplate ?>images/toggle.jpg?<?php echo time(); ?>" border="0" /></a> 
@@ -69,3 +70,6 @@
 <!-- Capa de cocina -->
 <!-- FIN -->
 <!-- Capa de cocina -->
+
+    </div>
+</div>

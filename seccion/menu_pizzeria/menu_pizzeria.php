@@ -1,11 +1,10 @@
+<div id="div_transition_pizzas" class="ini_transition_pizzas" style="float:left"><a href="javascript:show_div_pizzas();"><img src="<?php echo $rutatemplate ?>images/pizza.png" width="150" height="150"></a>
+    <div id="contenido_pizzas" style="visibility: hidden">
+        <a href="javascript:oculta_div_pizzas();"><img src="<?php echo $rutatemplate ?>images/cerrar.png"></a>
 <!-- Capa de pizzeria -->
 <!-- INICIO -->
 <!-- Capa de pizzeria -->
 <!-- Capa de pizzeria -->
-
-<div id="div_transition_pizzas" class="ini_transition_pizzas"><a href="javascript:show_div_pizzas();">Pizzas</a>
-    <div id="contenido_pizzas" style="visibility: hidden">
-        <a href="javascript:oculta_divs();">Cerrar</a>
 <div id="pizzeria" style="width: 400px; background: #5BADFF; float: left;">
 <!--BISTECK-->
     <a href="javascript:animatedcollapse.toggle('pizzabisteck')">Bisteck <img src="<?php echo $rutatemplate ?>images/toggle.jpg?<?php echo time(); ?>" border="0" /></a>

@@ -169,7 +169,7 @@ Zona para codigo de texto predictivo - Inicio
             width: 100px;
             height: 20px;
             background: #F0F0F0;
-            transition: width 1s, height 1s, margin 1s;
+            transition: width 0.5s, height 0.5s, margin 0.5s;
             margin: 50px auto 0;
         }
 
@@ -177,15 +177,87 @@ Zona para codigo de texto predictivo - Inicio
             width: 100px;
             height: 20px;
             background: #F0F0F0;
-            transition: width 1s, height 1s, margin 1s;
+            transition: width 0.5s, height 0.5s, margin 0.5s;
             margin: 50px auto 0;
         }
         
-	.show_transition_pizzas{
+	.show_transition_pizzas {
             width: 100%;
             height: 200px;
             background: #F0F0F0;
-            transition: width 1s, height 1s, margin 1s;
+            transition: width 0.5s, height 0.5s, margin 0.5s;
+            margin: 0 auto;
+        }
+        
+        .ini_transition_cocina {
+            width: 100px;
+            height: 20px;
+            background: #F0F0F0;
+            transition: width 0.5s, height 0.5s, margin 0.5s;
+            margin: 50px auto 0;
+        }
+
+        .hidde_transition_cocina {
+            width: 100px;
+            height: 20px;
+            background: #F0F0F0;
+            transition: width 0.5s, height 0.5s, margin 0.5s;
+            margin: 50px auto 0;
+        }
+        
+	.show_transition_cocina {
+            width: 100%;
+            height: 200px;
+            background: #F0F0F0;
+            transition: width 0.5s, height 0.5s, margin 0.5s;
+            margin: 0 auto;
+        }
+        
+        .ini_transition_postres {
+            width: 100px;
+            height: 20px;
+            background: #F0F0F0;
+            transition: width 0.5s, height 0.5s, margin 0.5s;
+            margin: 50px auto 0;
+        }
+
+        .hidde_transition_postres {
+            width: 100px;
+            height: 20px;
+            background: #F0F0F0;
+            transition: width 0.5s, height 0.5s, margin 0.5s;
+            margin: 50px auto 0;
+        }
+        
+	.show_transition_postres {
+            width: 100%;
+            height: 200px;
+            background: #F0F0F0;
+            transition: width 0.5s, height 0.5s, margin 0.5s;
+            margin: 0 auto;
+        }
+        
+        .ini_transition_bebidas {
+            width: 100px;
+            height: 20px;
+            background: #F0F0F0;
+            transition: width 0.5s, height 0.5s, margin 0.5s;
+            margin: 50px auto 0;
+        }
+
+        .hidde_transition_bebidas {
+            width: 100px;
+            height: 20px;
+            background: #F0F0F0;
+            transition: width 0.5s, height 0.5s, margin 0.5s;
+            margin: 50px auto 0;
+        }
+        
+	.show_transition_bebidas {
+            width: 100%;
+            height: 200px;
+            background: #F0F0F0;
+            transition: width 0.5s, height 0.5s, margin 0.5s;
             margin: 0 auto;
         }
 </style>
@@ -244,11 +316,11 @@ switch($privilegios){
             <div id="capa_cocina">
 <?php include_once "seccion/menu_cocina/menu_cocina.php"; ?>
             </div>
-            <div id="capa_bebidas">
-<?php include_once "seccion/menu_bebidas/menu_bebidas.php"; ?>
-            </div>
             <div id="capa_postres">
 <?php include_once "seccion/menu_postres/menu_postres.php"; ?>
+            </div>
+             <div id="capa_bebidas">
+<?php include_once "seccion/menu_bebidas/menu_bebidas.php"; ?>
             </div>
         </div>
     </ul>

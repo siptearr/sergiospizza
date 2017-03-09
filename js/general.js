@@ -1063,12 +1063,53 @@ function iniciar_comanda(){
     document.getElementById("comandas_overlay").style.visibility = "visible";
 }
 
-function oculta_divs(){
-    document.getElementById("div_transition_pizzas").className = "hidde_transition_pizzas";
-    document.getElementById("contenido_pizzas").style.visibility = "hidden";
-}
 function show_div_pizzas(){
     document.getElementById("div_transition_pizzas").className = "show_transition_pizzas";
     document.getElementById("contenido_pizzas").style.visibility = "visible";
 }
-    
+
+function oculta_div_pizzas(){
+    document.getElementById("div_transition_pizzas").className = "hidde_transition_pizzas";
+    document.getElementById("contenido_pizzas").style.visibility = "hidden";
+}
+
+function show_div_cocina(){
+    document.getElementById("div_transition_cocina").className = "show_transition_cocina";
+    document.getElementById("contenido_cocina").style.visibility = "visible";
+}
+
+function oculta_div_cocina(){
+    document.getElementById("div_transition_cocina").className = "hidde_transition_cocina";
+    document.getElementById("contenido_cocina").style.visibility = "hidden";
+}
+
+function show_div_postres(){
+    document.getElementById("div_transition_postres").className = "show_transition_postres";
+    document.getElementById("contenido_postres").style.visibility = "visible";
+}
+
+function oculta_div_postres(){
+    document.getElementById("div_transition_postres").className = "hidde_transition_postres";
+    document.getElementById("contenido_postres").style.visibility = "hidden";
+}
+
+function show_div_bebidas(){
+    document.getElementById("div_transition_bebidas").className = "show_transition_bebidas";
+    document.getElementById("contenido_bebidas").style.visibility = "visible";
+}
+
+function oculta_div_bebidas(){
+    document.getElementById("div_transition_bebidas").className = "hidde_transition_bebidas";
+    document.getElementById("contenido_bebidas").style.visibility = "hidden";
+}
+
+function agrega_orden(){
+    document.getElementById("div_transition_pizzas").className = "hidde_transition_pizzas";
+    document.getElementById("contenido_pizzas").style.visibility = "hidden";
+    document.getElementById("div_transition_cocina").className = "hidde_transition_cocina";
+    document.getElementById("contenido_cocina").style.visibility = "hidden";
+    document.getElementById("div_transition_postres").className = "hidde_transition_postres";
+    document.getElementById("contenido_postres").style.visibility = "hidden";
+    document.getElementById("div_transition_bebidas").className = "hidde_transition_bebidas";
+    document.getElementById("contenido_bebidas").style.visibility = "hidden";
+}

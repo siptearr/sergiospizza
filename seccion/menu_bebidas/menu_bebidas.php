@@ -1,3 +1,6 @@
+<div id="div_transition_bebidas" class="ini_transition_bebidas" style="float:left"><a href="javascript:show_div_bebidas();"><img src="<?php echo $rutatemplate ?>images/bebidas.png" width="150" height="150"></a>
+    <div id="contenido_bebidas" style="visibility: hidden">
+        <a href="javascript:oculta_div_bebidas();"><img src="<?php echo $rutatemplate ?>images/cerrar.png"></a>
 <!-- Capa de bebidas -->
 <!-- INICIO -->
 <!-- Capa de bebidas -->
@@ -22,3 +25,5 @@
 <!-- Capa de cocina -->
 <!-- FIN -->
 <!-- Capa de cocina -->
+    </div>
+</div>
