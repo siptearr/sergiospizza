@@ -1,6 +1,7 @@
-<div id="div_transition_postres" class="ini_transition_postres" style="float:left"><a href="javascript:show_div_postres();"><img src="<?php echo $rutatemplate ?>images/postres.png" width="150" height="150"></a>
-    <div id="contenido_postres" style="visibility: hidden">
-        <a href="javascript:oculta_div_postres();"><img src="<?php echo $rutatemplate ?>images/cerrar.png"></a>
+<div id="div_transition_postres" class="ini_transition_postres" style="float:left; width: 150px; position: relative"><a href="javascript:show_div_postres();"><img src="<?php echo $rutatemplate ?>images/postres.png" width="150" height="150"></a>
+    <br /><h1>Postres</h1>
+    <div id="contenido_postres" style="visibility: hidden;">
+        <div style="position: absolute; top: 0px;right: 0px;" ><a href="javascript:oculta_div_postres();"><img src="<?php echo $rutatemplate ?>images/cerrar.png" width="40" height="40"></a></div>
 <!-- Capa de postres -->
 <!-- INICIO -->
 <!-- Capa de postres -->

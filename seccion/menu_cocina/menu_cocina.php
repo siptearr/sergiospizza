@@ -1,6 +1,7 @@
-<div id="div_transition_cocina" class="ini_transition_cocina" style="float:left"><a href="javascript:show_div_cocina();"><img src="<?php echo $rutatemplate ?>images/cocina.png" width="150" height="150"></a>
-    <div id="contenido_cocina" style="visibility: hidden">
-        <a href="javascript:oculta_div_cocina();"><img src="<?php echo $rutatemplate ?>images/cerrar.png"></a>
+<div id="div_transition_cocina" class="ini_transition_cocina" style="float:left; width: 150px; position: relative" ><a href="javascript:show_div_cocina();"><img src="<?php echo $rutatemplate ?>images/cocina.png" width="150" height="150"></a>
+    <br /><h1>Cocina</h1>
+    <div id="contenido_cocina" style="visibility: hidden;">
+        <div style="position: absolute; top: 0px;right: 0px;" ><a href="javascript:oculta_div_cocina();"><img src="<?php echo $rutatemplate ?>images/cerrar.png" width="40" height="40"></a></div>
 <!-- Capa de cocina -->
 <!-- INICIO -->
 <!-- Capa de cocina -->

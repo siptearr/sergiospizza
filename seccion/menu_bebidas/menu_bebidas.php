@@ -1,12 +1,11 @@
-<div id="div_transition_bebidas" class="ini_transition_bebidas" style="float:left"><a href="javascript:show_div_bebidas();"><img src="<?php echo $rutatemplate ?>images/bebidas.png" width="150" height="150"></a>
-    <div id="contenido_bebidas" style="visibility: hidden">
-        <a href="javascript:oculta_div_bebidas();"><img src="<?php echo $rutatemplate ?>images/cerrar.png"></a>
+<div id="div_transition_bebidas" class="ini_transition_bebidas" style="float:left; width: 150px; position: relative"><a href="javascript:show_div_bebidas();"><img src="<?php echo $rutatemplate ?>images/bebidas.png" width="150" height="150"></a>
+    <br /><h1>Bebidas</h1>
+    <div id="contenido_bebidas" style="visibility: hidden;">
+        <div style="position: absolute; top: 0px;right: 0px;" ><a href="javascript:oculta_div_bebidas();"><img src="<?php echo $rutatemplate ?>images/cerrar.png" width="40" height="40"></a></div>
 <!-- Capa de bebidas -->
 <!-- INICIO -->
 <!-- Capa de bebidas -->
-<a href="javascript:animatedcollapse.show('menubebidas');" rel="toggle[bebidas]" data-openimage="<?php echo $rutatemplate ?>images/collapse.jpg?<?php echo time(); ?>" data-closedimage="<?php echo $rutatemplate ?>images/expand.jpg?<?php echo time(); ?>">Bebidas <img src="<?php echo $rutatemplate ?>images/collapse.jpg?<?php echo time(); ?>" border="0" /></a>
-
-<div id="bebidas" style="width: 300px; background: #5BADFF; float: left;">
+<div id="bebidas">
     <!-- Bebidas -->
     <a href="javascript:animatedcollapse.toggle('menubebidas');">Bebidas <img src="<?php echo $rutatemplate ?>images/toggle.jpg?<?php echo time(); ?>" border="0" /></a>
     <div id="menubebidas" style="width: 350px; background: #97CBFF; display:none; float:left">

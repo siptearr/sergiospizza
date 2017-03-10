@@ -1065,51 +1065,63 @@ function iniciar_comanda(){
 
 function show_div_pizzas(){
     document.getElementById("div_transition_pizzas").className = "show_transition_pizzas";
+    document.getElementById("div_transition_pizzas").style.width = "100%";
     document.getElementById("contenido_pizzas").style.visibility = "visible";
 }
 
 function oculta_div_pizzas(){
     document.getElementById("div_transition_pizzas").className = "hidde_transition_pizzas";
+    document.getElementById("div_transition_pizzas").style.width = "150px";
     document.getElementById("contenido_pizzas").style.visibility = "hidden";
 }
 
 function show_div_cocina(){
     document.getElementById("div_transition_cocina").className = "show_transition_cocina";
+    document.getElementById("div_transition_cocina").style.width = "100%";
     document.getElementById("contenido_cocina").style.visibility = "visible";
 }
 
 function oculta_div_cocina(){
     document.getElementById("div_transition_cocina").className = "hidde_transition_cocina";
+    document.getElementById("div_transition_cocina").style.width = "150px";
     document.getElementById("contenido_cocina").style.visibility = "hidden";
 }
 
 function show_div_postres(){
     document.getElementById("div_transition_postres").className = "show_transition_postres";
+    document.getElementById("div_transition_postres").style.width = "100%";
     document.getElementById("contenido_postres").style.visibility = "visible";
 }
 
 function oculta_div_postres(){
     document.getElementById("div_transition_postres").className = "hidde_transition_postres";
+    document.getElementById("div_transition_postres").style.width = "150px";
     document.getElementById("contenido_postres").style.visibility = "hidden";
 }
 
 function show_div_bebidas(){
     document.getElementById("div_transition_bebidas").className = "show_transition_bebidas";
+    document.getElementById("div_transition_bebidas").style.width = "100%";
     document.getElementById("contenido_bebidas").style.visibility = "visible";
 }
 
 function oculta_div_bebidas(){
     document.getElementById("div_transition_bebidas").className = "hidde_transition_bebidas";
+    document.getElementById("div_transition_bebidas").style.width = "150px";
     document.getElementById("contenido_bebidas").style.visibility = "hidden";
 }
 
 function agrega_orden(){
     document.getElementById("div_transition_pizzas").className = "hidde_transition_pizzas";
+    document.getElementById("div_transition_pizzas").style.width = "150px";
     document.getElementById("contenido_pizzas").style.visibility = "hidden";
     document.getElementById("div_transition_cocina").className = "hidde_transition_cocina";
+    document.getElementById("div_transition_cocina").style.width = "150px";
     document.getElementById("contenido_cocina").style.visibility = "hidden";
     document.getElementById("div_transition_postres").className = "hidde_transition_postres";
+    document.getElementById("div_transition_postres").style.width = "150px";
     document.getElementById("contenido_postres").style.visibility = "hidden";
     document.getElementById("div_transition_bebidas").className = "hidde_transition_bebidas";
+    document.getElementById("div_transition_bebidas").style.width = "150px";
     document.getElementById("contenido_bebidas").style.visibility = "hidden";
 }

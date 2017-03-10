@@ -1,6 +1,7 @@
-<div id="div_transition_pizzas" class="ini_transition_pizzas" style="float:left"><a href="javascript:show_div_pizzas();"><img src="<?php echo $rutatemplate ?>images/pizza.png" width="150" height="150"></a>
-    <div id="contenido_pizzas" style="visibility: hidden">
-        <a href="javascript:oculta_div_pizzas();"><img src="<?php echo $rutatemplate ?>images/cerrar.png"></a>
+<div id="div_transition_pizzas" class="ini_transition_pizzas" style="float:left; width: 150px; position: relative" ><a href="javascript:show_div_pizzas();"><img src="<?php echo $rutatemplate ?>images/pizza.png" width="150" height="150"></a>
+    <br /><h1>Pizzas</h1>
+    <div id="contenido_pizzas" style="visibility: hidden;">
+        <div style="position: absolute; top: 0px;right: 0px;" ><a href="javascript:oculta_div_pizzas();"><img src="<?php echo $rutatemplate ?>images/cerrar.png" width="40" height="40"></a></div>
 <!-- Capa de pizzeria -->
 <!-- INICIO -->
 <!-- Capa de pizzeria -->
